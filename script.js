@@ -73,7 +73,7 @@ const inputDistance = document.querySelector('.form__input--distance');
 const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
-
+const initialMessage = document.querySelector('.message');
 // let map, mapEvent;
 class App {
   // > Private instance properties
@@ -130,6 +130,7 @@ class App {
   _showForm(e) {
     this.#mapEvent = e;
     form.classList.remove('hidden');
+    initialMessage.style.display = "none";
     inputDistance.focus();
   }
 
